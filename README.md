@@ -3,7 +3,9 @@
 Este repositório contém uma pipeline de **ETL (Extract, Transform, Load)** desenvolvida para analisar a qualidade do vinho branco de uma fonte de dados fornecido previamente.  
 O projeto foi implementado em **Databricks** utilizando uma sequência de *notebooks* em Python e é orquestrado como um **Databricks Job**.  
 
-A arquitetura segue o padrão **Medallion (Bronze, Silver, Gold)**, refinando os dados progressivamente do estado bruto até gerar insights prontos para análise.  
+A arquitetura segue o padrão **Medallion (Bronze, Silver, Gold)**, refinando os dados progressivamente do estado bruto até gerar insights prontos para análise.
+
+Foram utilizadas como Tecnologias deste projeto: PySpark, SparkSQL e SQL. 
 
 ---
 
