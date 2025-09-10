@@ -1,0 +1,36 @@
+resources:
+  jobs:
+    Wine_Quality_Job:
+      name: Wine Quality Job
+      tasks:
+        - task_key: 00_setup_env
+          notebook_task:
+            notebook_path: /Workspace/Users/sjoao5498@gmail.com/00_setup_env
+            source: WORKSPACE
+        - task_key: 01_bronze_ingest
+          depends_on:
+            - task_key: 00_setup_env
+          notebook_task:
+            notebook_path: /Workspace/Users/sjoao5498@gmail.com/01_bronze_ingest
+            source: WORKSPACE
+        - task_key: 02_silver_transform_
+          depends_on:
+            - task_key: 01_bronze_ingest
+          notebook_task:
+            notebook_path: /Workspace/Users/sjoao5498@gmail.com/02_silver_transform
+            source: WORKSPACE
+        - task_key: 03_gold_kpis
+          depends_on:
+            - task_key: 02_silver_transform_
+          notebook_task:
+            notebook_path: /Workspace/Users/sjoao5498@gmail.com/03_gold_kpis
+            source: WORKSPACE
+        - task_key: 04_analytics_validate
+          depends_on:
+            - task_key: 03_gold_kpis
+          notebook_task:
+            notebook_path: /Workspace/Users/sjoao5498@gmail.com/04_analytics_validate
+            source: WORKSPACE
+      queue:
+        enabled: true
+      performance_target: STANDARD
