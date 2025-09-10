@@ -36,10 +36,6 @@ withColumnRenamed("residual sugar", "residual_sugar"). \
 withColumnRenamed("free sulfur dioxide", "free_sulfur_dioxide"). \
 withColumnRenamed("total sulfur dioxide", "total_sulfur_dioxide")
 
-# Esqueci que no material de apoio havia a sugestão de como fazer este código acima de forma resumida, com:
-# cols = [c.replace(' ', '_') for c in cols]
-# Decidi manter o código que eu fiz nesse caso, mesmo que mais verboso ou que não seja a forma mais correta de se realizar.
-
 # COMMAND ----------
 
 # MAGIC %md
